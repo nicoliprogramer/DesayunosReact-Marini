@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./img/logo.png";
 import CartWidget from "./CartWidget";
+import { NavLink } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -9,25 +10,22 @@ const NavBar = () => {
       <div className="col-md-12 bg-black text-white p-3">
         <ul className="nav d-flex align-items-center">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#"><img src={logo} width="100px" /></a>
+            <NavLink className="nav-link active" aria-current="page" href="#"><img src={logo} width="100px" /></NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link disablede link_header">WhatsApp</a>
+            <NavLink className="nav-link link_header" to='/'>Inicio</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link link_header" href="#">Inicio</a>
+            <NavLink className="nav-link link_header" to='/categoria/items'>$-3000</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link link_header" href="#">Productos</a>
+            <NavLink className="nav-link link_header" to='categoria/producto'>$+3000</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link link_header" href="#">Nosotros</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link  link_header" href="#">contacto</a>
+            <NavLink className="nav-link  link_header" to=''>contacto</NavLink>
           </li>
           <li>
-            <a className="nav-link"><CartWidget /></a>
+            <NavLink className="nav-link"><CartWidget /></NavLink>
           </li>
         </ul>
       </div>
