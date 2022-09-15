@@ -6,7 +6,7 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ data }) => {
 
-    const { title, precio, description } = data;
+    const { title, precio, description, img } = data;
     //const src = require(`${img, title}`)
 
 
@@ -23,6 +23,7 @@ const ItemDetail = ({ data }) => {
                     <h1>Nombre: {title}</h1>
                     <p>Precio: {precio}</p>
                     <p>{description}</p>
+                    <img src={img}></img>
                     <ItemCount initial={1} stock={5} onAdd={onAdd} />
                 </div>
             </div>
