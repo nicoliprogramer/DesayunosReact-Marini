@@ -4,9 +4,9 @@ import ItemCount from "./ItemCount";
 //import { Link } from 'react-router-dom'
 
 
-const ItemDetail = ({data}) => {
+const ItemDetail = ({ data }) => {
 
-    const { title, precio} = data;
+    const { title, precio, description } = data;
     //const src = require(`${img, title}`)
 
 
@@ -17,15 +17,16 @@ const ItemDetail = ({data}) => {
 
 
     return (
-            <div className="container">
-                <div className="detail">
-                    <div className="content">
-                        <h1>Nombre: {title}</h1>
-                        <p>Precio: {precio}</p>
-                        <ItemCount initial={1} stock={5} onAdd={onAdd} />
-                    </div>
+        <div className="container">
+            <div className="detail">
+                <div className="content">
+                    <h1>Nombre: {title}</h1>
+                    <p>Precio: {precio}</p>
+                    <p>{description}</p>
+                    <ItemCount initial={1} stock={5} onAdd={onAdd} />
                 </div>
             </div>
+        </div>
     );
 };
 
