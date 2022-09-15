@@ -16,10 +16,10 @@ const NavBar = () => {
             <NavLink className="nav-link link_header" to='/'>Inicio</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link link_header" to='/categoria/items'>$-3000</NavLink>
+            <NavLink className="nav-link link_header" to='/category/items'>$-3000</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link link_header" to='categoria/producto'>$+3000</NavLink>
+            <NavLink className="nav-link link_header" to='/category/producto'>$+3000</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link  link_header" to=''>contacto</NavLink>
