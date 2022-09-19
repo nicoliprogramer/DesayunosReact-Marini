@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../componentes/styles/ItemDetail.css";
 import ItemCount from "./ItemCount";
 //import { Link } from 'react-router-dom'
@@ -12,9 +13,10 @@ const ItemDetail = ({ data }) => {
 
     //count
     const onAdd = (quanty) => {
-        console.log(`Compraste ${quanty} unidades`);
+        setGoToCart(true);
     }
 
+    const [goToCart, setGoToCart] = useState(false);
 
     return (
         <div className="container">
@@ -24,7 +26,12 @@ const ItemDetail = ({ data }) => {
                     <p>Precio: {precio}</p>
                     <p>{description}</p>
                     <img src={src}></img>
-                    <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                    {
+
+                        goToCart
+                            ? <Link to='/cart'>Terminar Compra</Link>
+                            : <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                    }
                 </div>
             </div>
         </div>
