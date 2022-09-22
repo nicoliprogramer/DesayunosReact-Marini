@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
+
 const Item = ({ info }) => {
+
 
   const { img, title, precio, category, id } = info
   const src = require(`${img}`)
