@@ -19,11 +19,10 @@ const CartProvider = ({ children }) => {
 
     const clearCart = () => setCart([]);
 
-    const isInCart = (id) => {
-        return cart.find(product => product.id === id) ? true : false;
-    }
+    const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
-    const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
+
+    const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
 
     return (
         <CartContext.Provider value={{
