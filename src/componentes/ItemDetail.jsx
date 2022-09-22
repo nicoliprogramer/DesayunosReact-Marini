@@ -11,9 +11,9 @@ const ItemDetail = ({ data }) => {
 
 
     //count
-    const onAdd = (quanty) => {
+    const onAdd = (quantity) => {
         setGoToCart(true);
-        addProduct(data, quanty);
+        addProduct(data, quantity);
     }
 
     const [goToCart, setGoToCart] = useState(false);
