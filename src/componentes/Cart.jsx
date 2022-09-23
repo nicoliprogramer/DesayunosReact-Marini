@@ -7,9 +7,9 @@ export const Cart = () => {
     return (
         <div>
             {
-                items.map((item) => (
-                    <div key={item.id}>
-                        <h1>{item.title}</h1>
+                items.map((data) => (
+                    <div key={data.id}>
+                        <h1>{data.title}</h1>
                     </div>
                 ))
             }
