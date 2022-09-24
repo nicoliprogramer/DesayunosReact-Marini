@@ -29,10 +29,8 @@ const ItemDetail = ({ data }) => {
                     <h1>Nombre: {title}</h1>
                     <p>Precio: {precio}</p>
                     <p>{description}</p>
-                    <img src={`../componentes/img/${img}`} alt=""></img>
-
+                    <img src={`../componentes/img/${img}`} alt="Imagen Cargando..."></img>
                     {
-
                         goToCart
                             ? <Link to='/Cart'>Terminar Compra</Link>
                             : <ItemCount data={data} initial={1} stock={5} addItem={addItem} />
