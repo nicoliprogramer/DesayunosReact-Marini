@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
 
     const [data, setData] = useState([]);
 
-    const {id} = useParams();
+    const { id } = useParams();
 
     const filtrarPorId = () => {
         items.some((item) => {

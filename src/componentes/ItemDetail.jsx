@@ -6,17 +6,21 @@ import { CartContext } from "./context/CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ data }) => {
+
     const [goToCart, setGoToCart] = useState(false);
+
 
     // const { addItem } = CartContext(CartContext)
 
     const { title, precio, description, img } = data;
-    // const src = require(`${img}`)
+    //  const src = { img };
 
 
-    const { addItem } = useContext(CartContext)
+    const { addItem } = useContext(CartContext);
 
-
+    // const addItem = (addItem) => {
+    //     setGoToCart(!true)
+    // }
 
     return (
         <div className="container">
@@ -25,11 +29,12 @@ const ItemDetail = ({ data }) => {
                     <h1>Nombre: {title}</h1>
                     <p>Precio: {precio}</p>
                     <p>{description}</p>
-                    {/* <img src={src}></img> */}
+                    <img src={`../componentes/img/${img}`} alt=""></img>
+
                     {
 
                         goToCart
-                            ? <Link to='/cart'>Terminar Compra</Link>
+                            ? <Link to='/Cart'>Terminar Compra</Link>
                             : <ItemCount data={data} initial={1} stock={5} addItem={addItem} />
                     }
                 </div>

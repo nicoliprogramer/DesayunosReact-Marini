@@ -7,9 +7,9 @@ export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([]);
 
 
-    const isInCart = (id) => {
+    // const isInCart = (id) => {
 
-    }
+    // }
 
     const addItem = (data, count) => {
         setItems([...items, { id: data.id, name: data.title, price: data.price, count: count }])
