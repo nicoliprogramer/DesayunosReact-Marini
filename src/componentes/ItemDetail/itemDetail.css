@@ -1,0 +1,10 @@
+.counter {
+  padding: 1rem;
+  margin: auto;
+}
+
+.btn {
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin: 5px;
+}

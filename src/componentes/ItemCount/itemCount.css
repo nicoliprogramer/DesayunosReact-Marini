@@ -1,0 +1,10 @@
+.count {
+    padding: 1rem;
+    margin: auto;
+}
+
+.count button {
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin: 5px;
+}

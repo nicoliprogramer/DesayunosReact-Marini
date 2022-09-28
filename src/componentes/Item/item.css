@@ -1,0 +1,9 @@
+.desayunos {
+    display: grid;
+    width: 500px;
+}
+
+.desayunos img {
+    width: 100%;
+    height: 100%;
+}
