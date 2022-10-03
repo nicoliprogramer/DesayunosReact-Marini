@@ -91,7 +91,7 @@ const Cart = () => {
                 <input type="text" color="black" required placeholder='Email' value={email} size="50" onChange={(e) => setEmail(e.target.value)} /><br />
                 <input type="text" color="black" required placeholder='Teléfono' value={phone} size="50" onChange={(e) => setPhone(e.target.value)} /><br />
                 <input type="text" color="black" required placeholder='Dirección' value={address} size="50" onChange={(e) => setAddress(e.target.value)} /><br />
-                <button className='btn btn-dark border text-white rounded-pill' onClick={handleClick}>Comprar</button><br /><br />
+                <button className='btn btn-primary text-white counter' onClick={handleClick}>Comprar</button><br /><br />
                 <Link className='btn btn-primary text-white counter' to='/'>Seguir comprando</Link><br></br><br></br>
                 <button className='btn btn-primary text-white counter' onClick={deleteAll}>Vaciar carrito</button>
             </div>
