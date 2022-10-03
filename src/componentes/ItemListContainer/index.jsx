@@ -33,24 +33,17 @@ export const ItemListContainer = ({ props }) => {
 
     return (
 
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
-                    <ItemList productos={productos} />
-
-                </div>
-            </div>
-
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <Title greeting={props} />
-                    </div>
-                </div>
+        <div className="counter d-flex img-fluid justify-content-center mx-3 p-3">
+            <div>
+                <ItemList productos={productos} />
 
             </div>
-        </div >
 
+            <div >
+                <Title greeting={props} />
+            </div>
+
+        </div>
     )
 }
 

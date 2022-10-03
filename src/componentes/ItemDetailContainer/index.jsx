@@ -10,16 +10,16 @@ export const ItemDetailContainer = () => {
 
     const [data, setData] = useState({});
 
-    const { id } = useParams();
+    const { detalleId } = useParams();
 
     useEffect(() => {
 
         const querydb = getFirestore();
 
-        const queryDoc = doc(querydb, 'items', 'nkOwqiliR3jIKMJNmBOM');
+        const queryDoc = doc(querydb, 'items', '2Fl26RbxAizSAZ97Xico');
         getDoc(queryDoc)
             .then(res => setData({ id: res.id, ...res.data() }))
-    }, [id])
+    }, [detalleId])
 
     return (
         <>
