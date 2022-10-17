@@ -4,6 +4,7 @@ import { useCartContext } from '../../context/CartContext';
 import ItemCart from '../ItemCart';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
+import Swal from 'sweetalert2'
 import "./Cart.css";
 
 const Cart = () => {

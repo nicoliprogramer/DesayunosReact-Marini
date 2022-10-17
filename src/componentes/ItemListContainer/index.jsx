@@ -9,7 +9,7 @@ import Title from '../Title';
 
 
 export const ItemListContainer = ({ props }) => {
-    const [productos, setProductos] = useState([]);
+    const [data, setData] = useState([]);
 
     const { categoryId } = useParams();
 
@@ -20,10 +20,10 @@ export const ItemListContainer = ({ props }) => {
         if (categoryId) {
             const queryFilter = query(queryCollection, where('category', '==', categoryId))
             getDocs(queryFilter)
-                .then(res => setProductos(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+                .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
         } else {
             getDocs(queryCollection)
-                .then(res => setProductos(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+                .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
         }
 
 
@@ -35,7 +35,7 @@ export const ItemListContainer = ({ props }) => {
 
         <div className="counter d-flex img-fluid justify-content-center mx-3 p-3">
             <div>
-                <ItemList productos={productos} />
+                <ItemList data={data} />
 
             </div>
 
